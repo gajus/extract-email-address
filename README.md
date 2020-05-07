@@ -12,6 +12,7 @@ Extracts email address from an arbitrary text input.
 * [extract-email-address 📧](#extract-email-address)
     * [API](#extract-email-address-api)
     * [Usage](#extract-email-address-usage)
+    * [Filtering results](#extract-email-address-filtering-results)
     * [Related projects](#extract-email-address-related-projects)
 
 
@@ -44,6 +45,13 @@ extractEmail('ignores invalid emails foo@bar');
 // []
 
 ```
+
+<a name="extract-email-address-filtering-results"></a>
+## Filtering results
+
+Some matches might be syntactically valid email addresses, but not actual email addresses, e.g. `apple-touch-icon@2.png`.
+
+`extract-email-address` uses a list of valid top-level domains to filter out matches that are definitely not emails (such as `png` example), but you might still need to filter out domain specific false-positives.
 
 <a name="extract-email-address-related-projects"></a>
 ## Related projects
