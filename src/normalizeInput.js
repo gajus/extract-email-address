@@ -19,5 +19,6 @@ export default (input: string): string => {
 
     // Matches all ASCII characters from the space to tilde.
     .replace(/[^ -~]/g, ' ')
-    .trim();
+    .trim()
+    .toLowerCase();
 };

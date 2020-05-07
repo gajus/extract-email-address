@@ -45,6 +45,9 @@ extractEmail('extracts emails surrounded by odd unicode characters, e.g. 邮箱�
 extractEmail('extracts emails surrounded by emojis, e.g. 📧gajus@gajus.com');
 // [{email: 'gajus@gajus.com'}]
 
+extractEmail('lowercases emails, e.g. GAJUS@GAJUS.COM');
+// [{email: 'gajus@gajus.com'}]
+
 extractEmail('excludes invalid emails with invalid TLDs, e.g. gajus@gajus.png');
 // []
 
