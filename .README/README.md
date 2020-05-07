@@ -33,6 +33,9 @@ extractEmail('extracts multiple emails located anywhere within the input: foo@ga
 extractEmail('extracts all sorts of obfuscated emails, e.g. f o o @ b a r . c o m or baz [at] qux [dot] com');
 // [{email: 'foo@bar.com'}, {email: 'baz@qux.com'}]
 
+extractEmail('extracts tagged emails, e.g. gajus+foo@gajus.com');
+// [{email: 'gajus+foo@gajus.com'}]
+
 extractEmail('excludes invalid emails with invalid TLDs, e.g. gajus@gajus.png');
 // []
 
