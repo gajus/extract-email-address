@@ -25,6 +25,17 @@ for (const fixture of fixtures) {
   });
 }
 
+test('extracts multiple email addresses', (t) => {
+  t.deepEqual(extractEmail('foo@bar.com baz@qux.com'), [
+    {
+      email: 'foo@bar.com',
+    },
+    {
+      email: 'baz@qux.com',
+    },
+  ]);
+});
+
 test('extracts email (gajus+test@gajus.com)', (t) => {
   t.deepEqual(extractEmail('gajus+test@gajus.com'), [
     {
