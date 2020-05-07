@@ -16,5 +16,8 @@ export default (input: string): string => {
     .replace(/\s*\(dot\)\s*/g, '.')
     .replace(/\s*\[at\]\s*/g, '@')
     .replace(/\s*\[dot\]\s*/g, '.')
+
+    // Matches all ASCII characters from the space to tilde.
+    .replace(/[^ -~]/g, ' ')
     .trim();
 };

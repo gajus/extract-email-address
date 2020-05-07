@@ -5,6 +5,7 @@ import extractEmail from '../../src/extractEmail';
 
 const fixtures = [
   'gajus@gajus.com',
+  '：gajus@gajus.com',
   '📧gajus@gajus.com',
   'gajus@gajus.com.',
   'foo gajus@gajus.com bar',
