@@ -1,5 +1,6 @@
 // @flow
 
+import tlds from 'tlds';
 import normalizeInput from './normalizeInput';
 import type {
   EmailMatchType,
@@ -15,6 +16,15 @@ export default (input: string): $ReadOnlyArray<EmailMatchType> => {
   return matches
     .map((email) => {
       return email;
+    })
+    .filter((email) => {
+      for (const tld of tlds) {
+        if (email.endsWith('.' + tld)) {
+          return true;
+        }
+      }
+
+      return false;
     })
     .filter((email, index, self) => {
       return self.indexOf(email) === index;

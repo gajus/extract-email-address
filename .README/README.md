@@ -38,6 +38,12 @@ extractEmail('ignores invalid emails foo@bar');
 
 ```
 
+## Filtering results
+
+Some matches might be syntactically valid email addresses, but not actual email addresses, e.g. `apple-touch-icon@2.png`.
+
+`extract-email-address` uses a list of valid top-level domains to filter out matches that are definitely not emails (such as `png` example), but you might still need to filter out domain specific false-positives.
+
 ## Related projects
 
 * [`extract-date`](https://github.com/gajus/extract-date) – Extracts date from an arbitrary text input.
