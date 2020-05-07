@@ -12,7 +12,7 @@ const fixtures = [
   '<gajus@gajus.com>',
   '【email: gajus@gajus.com】',
   '<a href="/contact">contact: gajus@gajus.com</a>',
-  '"mailto:gajus@gajus.com"'
+  '"mailto:gajus@gajus.com"',
 ];
 
 for (const fixture of fixtures) {
