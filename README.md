@@ -47,6 +47,9 @@ extractEmail('extracts all sorts of obfuscated emails, e.g. f o o @ b a r . c o 
 extractEmail('extracts tagged emails, e.g. gajus+foo@gajus.com');
 // [{email: 'gajus+foo@gajus.com'}]
 
+extractEmail('extracts emails surrounded by emojis, e.g. 📧gajus@gajus.com');
+// [{email: 'gajus@gajus.com'}]
+
 extractEmail('excludes invalid emails with invalid TLDs, e.g. gajus@gajus.png');
 // []
 
