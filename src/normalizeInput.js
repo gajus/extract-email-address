@@ -5,7 +5,7 @@ import createEmojiRegex from 'emoji-regex';
 const emojiRegex = createEmojiRegex();
 
 export default (input: string): string => {
-  return input
+  return decodeURIComponent(input)
     .replace(emojiRegex, ' ')
     .replace(/(?<=\s|^)([a-z0-9.-_@])\s?(?=[a-z0-9.-_@](?:\s|$))/g, '$1')
     .replace(/\s+at\s+/g, '@')
