@@ -1,4 +1,5 @@
 // @flow
+//@ jetbrain intellijiidea_inputs
 
 import tlds from 'tlds';
 import normalizeInput from './normalizeInput';
