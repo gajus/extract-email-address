@@ -58,3 +58,11 @@ test('removes duplicates email', (t) => {
     },
   ]);
 });
+
+test('extracts email mailto', (t) => {
+  t.deepEqual(extractEmail('mailto%3Ajohn%2Bsmith%40gajus.com'), [
+    {
+      email: 'john+smith@gajus.com',
+    },
+  ]);
+});

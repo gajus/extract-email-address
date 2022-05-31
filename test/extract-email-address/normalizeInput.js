@@ -16,4 +16,5 @@ test('normalizes different email formats', (t) => {
   t.is(normalizeInput('gajus (at) gajus   (dot)   com'), 'gajus@gajus.com');
   t.is(normalizeInput('gajus <at> gajus   <dot>   com'), 'gajus@gajus.com');
   t.is(normalizeInput('gajus at gajus   dot   com'), 'gajus@gajus.com');
+  t.is(normalizeInput('john%2Bsmith%40gajus.com'), 'john+smith@gajus.com');
 });
