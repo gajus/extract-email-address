@@ -56,5 +56,5 @@
     "lint": "eslint ./src ./test && flow",
     "test": "NODE_ENV=test ava --verbose --serial"
   },
-  "version": "0.0.0-dev"
+  "version": "1.4.0"
 }
