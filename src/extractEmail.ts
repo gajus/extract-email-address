@@ -1,13 +1,15 @@
-// @flow
-
+import { normalizeInput } from './normalizeInput';
 import tlds from 'tlds';
-import normalizeInput from './normalizeInput';
-import type {
-  EmailMatchType,
-} from './types';
 
-export default (input: string): $ReadOnlyArray<EmailMatchType> => {
-  const matches = normalizeInput(input).match(/(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g);
+export type EmailMatch = {
+  email: string;
+};
+
+export const extractEmail = (input: string): EmailMatch[] => {
+  const matches = normalizeInput(input).match(
+    // eslint-disable-next-line unicorn/better-regex, require-unicode-regexp, regexp/no-unused-capturing-group
+    /(([^\s"(),.:;<>@[\\\]]+(\.[^\s"(),.:;<>@[\\\]]+)*)|(".+"))@((\[(?:\d{1,3}\.){3}\d{1,3}\])|(([\dA-Za-z\-]+\.)+[A-Za-z]{2,}))/g,
+  );
 
   if (!matches) {
     return [];

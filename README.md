@@ -20,9 +20,9 @@ Extracts email address from an arbitrary text input.
 ## API
 
 ```js
-import extractEmail from 'extract-email-address';
-import type {
-  EmailMatchType,
+import {
+  extractEmail,
+  type EmailMatchType,
 } from 'extract-email-address';
 
 extractEmail(input: string): $ReadOnlyArray<EmailMatchType>;
@@ -33,7 +33,7 @@ extractEmail(input: string): $ReadOnlyArray<EmailMatchType>;
 ## Usage
 
 ```js
-import extractEmail from 'extract-email-address';
+import { extractEmail } from 'extract-email-address';
 
 extractEmail('extracts email from anywhere within the input gajus@gajus.com');
 // [{email: 'gajus@gajus.com'}]

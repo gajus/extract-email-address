@@ -1,7 +1,5 @@
-// @flow
-
+import { extractEmail } from './extractEmail';
 import test from 'ava';
-import extractEmail from '../../src/extractEmail';
 
 const fixtures = [
   'gajus@gajus.com',
