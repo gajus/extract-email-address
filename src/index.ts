@@ -1,2 +1,1 @@
-export { extractEmail } from './extractEmail';
-export type { EmailMatchType } from './types';
+export { type EmailMatch, extractEmail } from './extractEmail';

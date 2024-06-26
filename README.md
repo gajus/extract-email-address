@@ -22,11 +22,10 @@ Extracts email address from an arbitrary text input.
 ```js
 import {
   extractEmail,
-  type EmailMatchType,
+  type EmailMatch,
 } from 'extract-email-address';
 
-extractEmail(input: string): $ReadOnlyArray<EmailMatchType>;
-
+extractEmail(input: string): readonly EmailMatch[];
 ```
 
 <a name="extract-email-address-usage"></a>
