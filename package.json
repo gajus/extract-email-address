@@ -25,18 +25,12 @@
     "del-cli": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-config-canonical": "^43.0.13",
-    "husky": "^9.0.11",
     "semantic-release": "^24.0.0",
     "sinon": "^18.0.0",
     "ts-node": "^10.9.2"
   },
   "engines": {
     "node": ">6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run test && npm run build"
-    }
   },
   "keywords": [
     "date",
@@ -54,7 +48,8 @@
   "scripts": {
     "build": "del-cli ./dist && tsc",
     "lint": "eslint ./src ./test && flow",
+    "prepare": "husky",
     "test": "NODE_ENV=test ava --verbose --serial"
   },
-  "version": "1.4.0"
+  "version": "2.0.0"
 }
