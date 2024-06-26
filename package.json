@@ -48,7 +48,6 @@
   "scripts": {
     "build": "del-cli ./dist && tsc",
     "lint": "eslint ./src ./test && flow",
-    "prepare": "husky",
     "test": "NODE_ENV=test ava --verbose --serial"
   },
   "version": "3.0.0"
