@@ -22,6 +22,7 @@
   "description": "Extracts email address from an arbitrary text input.",
   "devDependencies": {
     "ava": "^6.1.3",
+    "del-cli": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-config-canonical": "^43.0.13",
     "husky": "^9.0.11",
