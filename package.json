@@ -16,6 +16,7 @@
     ]
   },
   "dependencies": {
+    "decode-uri-component": "^0.4.1",
     "emoji-regex": "^9.0.0",
     "tlds": "^1.253.0"
   },

@@ -1,10 +1,11 @@
+import decodeUriComponent from 'decode-uri-component';
 import createEmojiRegex from 'emoji-regex';
 
 const emojiRegex = createEmojiRegex();
 
 export const normalizeInput = (input: string): string => {
   return (
-    decodeURIComponent(input)
+    decodeUriComponent(input)
       .replace(emojiRegex, ' ')
       .replaceAll(/(?<=\s|^)([.\-_a-z])\s?(?=[.\-_a-z](?:\s|$))/gu, '$1')
       .replaceAll(/\s+at\s+/gu, '@')
