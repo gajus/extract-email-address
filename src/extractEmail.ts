@@ -8,7 +8,7 @@ export type EmailMatch = {
 export const extractEmail = (input: string): readonly EmailMatch[] => {
   const matches = normalizeInput(input).match(
     // eslint-disable-next-line unicorn/better-regex, require-unicode-regexp, regexp/no-unused-capturing-group
-    /(([^\s"(),.:;<>@[\\\]]+(\.[^\s"(),.:;<>@[\\\]]+)*)|(".+"))@((\[(?:\d{1,3}\.){3}\d{1,3}\])|(([\dA-Za-z\-]+\.)+[A-Za-z]{2,}))/g,
+    /\b[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g,
   );
 
   if (!matches) {
