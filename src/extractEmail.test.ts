@@ -2,6 +2,7 @@ import { extractEmail } from './extractEmail';
 import test from 'ava';
 
 const fixtures = [
+  'foo bar baz at gajus@gajus.com',
   'gajus@gajus.com',
   'GAJUS@GAJUS.COM',
   '：gajus@gajus.com',
@@ -42,6 +43,22 @@ test('extracts email (gajus+test@gajus.com)', (t) => {
   t.deepEqual(extractEmail('gajus+test@gajus.com'), [
     {
       email: 'gajus+test@gajus.com',
+    },
+  ]);
+});
+
+test('extracts email (gajus.gajus@gajus.com)', (t) => {
+  t.deepEqual(extractEmail('gajus.gajus@gajus.com'), [
+    {
+      email: 'gajus.gajus@gajus.com',
+    },
+  ]);
+});
+
+test('extracts email (gajus.gajus+test@gajus.com)', (t) => {
+  t.deepEqual(extractEmail('gajus.gajus+test@gajus.com'), [
+    {
+      email: 'gajus.gajus+test@gajus.com',
     },
   ]);
 });

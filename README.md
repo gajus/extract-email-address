@@ -6,7 +6,7 @@
 [![Canonical Code Style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)
 [![Twitter Follow](https://img.shields.io/twitter/follow/kuizinas.svg?style=social&label=Follow)](https://twitter.com/kuizinas)
 
-Extracts email address from an arbitrary text input.
+Extracts email-like entities from an arbitrary text input.
 
 * [extract-email-address 📧](#extract-email-address)
     * [API](#extract-email-address-api)
