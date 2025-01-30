@@ -1,7 +1,6 @@
 <a name="extract-email-address"></a>
 # extract-email-address 📧
 
-[![Travis build status](http://img.shields.io/travis/gajus/extract-email-address/master.svg?style=flat-square)](https://travis-ci.org/gajus/extract-email-address)
 [![Coveralls](https://img.shields.io/coveralls/gajus/extract-email-address.svg?style=flat-square)](https://coveralls.io/github/gajus/extract-email-address)
 [![NPM version](http://img.shields.io/npm/v/extract-email-address.svg?style=flat-square)](https://www.npmjs.org/package/extract-email-address)
 [![Canonical Code Style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)
